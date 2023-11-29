@@ -32,7 +32,7 @@ const MainBox = styled.div`
   padding: 15px;
   flex-direction: row;
   /* background-color: #1e293b !important; */
-  background-color: ${(props) => props.theme.body};
+  /* background-color: ${(props) => props.theme.body}; */
   border-bottom: 1px solid #f8f8f8;
 
   #navbarScroll {
@@ -81,7 +81,13 @@ const FormBox = styled.div`
 //   subtitle: "gray",
 // };
 
-const MyPart1 = ({ isDarkTheme, toggleTheme, lightTheme, darkTheme }) => {
+const MyPart1 = ({
+  isDarkTheme,
+  toggleTheme,
+  lightTheme,
+  darkTheme,
+  theme,
+}) => {
   return (
     <MainBox>
       <Navbar.Brand href="#">
@@ -188,7 +194,7 @@ const MyPart1 = ({ isDarkTheme, toggleTheme, lightTheme, darkTheme }) => {
           >
             {isDarkTheme ? <Sun className="sun" /> : <Moon className="moon" />}
           </Button>
-          <Button variant="outline-success" className="fw-bold">
+          <Button variant="outline-success" className="fw-bold" theme={theme}>
             Sign in
           </Button>
           <Button variant="outline-danger" className="fw-bold">
@@ -201,9 +207,3 @@ const MyPart1 = ({ isDarkTheme, toggleTheme, lightTheme, darkTheme }) => {
 };
 
 export default MyPart1;
-
-// const Navbar = styled.div`
-//   background-color: red;
-//   border: 1px solid black;
-//   height: 10vh;
-// `;
