@@ -30,7 +30,8 @@ const MainBox = styled.div`
   flex-direction: row;
   border-bottom: 2px solid #f8f8f8;
   /* height: 8vh; */
-
+  background-color: ${(props) => props.theme.nav};
+  /* background-color: #1e293b; */
   #navbarScroll {
     .nav {
       width: 100%;

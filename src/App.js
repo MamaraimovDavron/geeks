@@ -9,12 +9,13 @@ const AppBox = styled.div`
   /* background-color: red !important; */
   /* height: 100%; */
   background-color: ${(props) => props.theme.body};
+
   /* min-height: 100vh; */
 `;
 
 const darkTheme = {
-  // background-color: #1e293b;
-  body: "#1e293b",
+  nav: "#1E293B",
+  body: "#0F172A",
   title: "#fff",
   subtitle: "#b6b6b6",
   miniBody: "#0B1324",
@@ -27,9 +28,11 @@ const darkTheme = {
   aColor: "white",
   socialNetworkBgColor: "#0F172A",
   textColor: "#948CA7",
+  part3Body: "#0F172A",
 };
 
 const lightTheme = {
+  nav: "#1e293b",
   body: "white",
   title: "black",
   subtitle: "gray",
@@ -43,6 +46,7 @@ const lightTheme = {
   aColor: "black",
   socialNetworkBgColor: "#f1f5f9",
   textColor: "black",
+  part3Body: "#E2E8F0",
 };
 
 const App = () => {
@@ -69,7 +73,12 @@ const App = () => {
         theme={theme}
       />
 
-      <MyPart3 />
+      <MyPart3
+        isDarkTheme={isDarkTheme}
+        lightTheme={lightTheme}
+        darkTheme={darkTheme}
+        theme={theme}
+      />
 
       {/* <div className="container-fluid"></div> */}
     </AppBox>

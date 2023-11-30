@@ -19,6 +19,7 @@ const Part2Box = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  /* background-color: ${(props) => props.theme.body}; */
 `;
 
 const TextVanilla = styled.h1`
