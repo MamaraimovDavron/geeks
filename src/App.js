@@ -3,6 +3,7 @@ import MyPart1 from "./components/Part1/MyPart1";
 import { useState } from "react";
 import styled from "styled-components";
 import MyPart2 from "./components/Part2/MyPart2";
+import MyPart3 from "./components/Part3/MyPart3";
 
 const AppBox = styled.div`
   /* background-color: red !important; */
@@ -24,6 +25,8 @@ const darkTheme = {
   iconColor: "#AF7632",
   iconBgColor: "#5A4327",
   aColor: "white",
+  socialNetworkBgColor: "#0F172A",
+  textColor: "#948CA7",
 };
 
 const lightTheme = {
@@ -38,6 +41,8 @@ const lightTheme = {
   iconColor: "#C68840",
   iconBgColor: "#FFEEDA",
   aColor: "black",
+  socialNetworkBgColor: "#f1f5f9",
+  textColor: "black",
 };
 
 const App = () => {
@@ -63,6 +68,8 @@ const App = () => {
         darkTheme={darkTheme}
         theme={theme}
       />
+
+      <MyPart3 />
 
       {/* <div className="container-fluid"></div> */}
     </AppBox>

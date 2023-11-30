@@ -8,6 +8,8 @@ import { Watch } from "react-bootstrap-icons";
 import { CameraVideo } from "react-bootstrap-icons";
 import { Person } from "react-bootstrap-icons";
 import { CheckCircle } from "react-bootstrap-icons";
+import { Google, Twitter, Facebook } from "react-bootstrap-icons";
+import Form from "react-bootstrap/Form";
 
 const Part2Box = styled.div`
   height: 86.7vh;
@@ -100,6 +102,129 @@ const ColChecked = styled.div`
   }
 `;
 
+const Account = styled.form`
+  height: 86.7vh;
+  /* border: 1px solid #ff1234; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .form {
+    /* border: 1px solid red; */
+    box-shadow: 2px 5px 5px 4px #cfd0d4;
+    width: 80%;
+    height: 55vh;
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    h3 {
+      color: ${(props) => props.theme.title};
+    }
+    ul {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0;
+      li {
+        list-style: none;
+
+        a {
+          text-decoration: none;
+          border: 1px solid red;
+          padding: 12px 24px;
+          width: 140px;
+          border-radius: 8px;
+          background-color: ${(props) => props.theme.socialNetworkBgColor};
+          border: none;
+          color: ${(props) => props.theme.title};
+          font-weight: 600;
+          transition: all 0.4s;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+          &:hover {
+            background-color: #cdd0d4;
+          }
+        }
+      }
+    }
+
+    span {
+      /* border: 1px solid; */
+      padding: 0;
+      margin-top: -10px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      .hr {
+        /* border: 1px solid red; */
+        width: 80%;
+        padding: 0;
+
+        border-top: 1px solid #cdd0d4;
+      }
+
+      h3 {
+        font-size: 13px;
+        font-weight: 400;
+        /* padding: 5px; */
+        padding-bottom: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        color: #73a0c3;
+      }
+    }
+
+    input {
+      border: none;
+      outline: 0;
+      border: ${(props) => props.theme.searchBorder};
+      padding: 6px 18px;
+      border-radius: 6px;
+      background-color: ${(props) => props.theme.miniBody};
+      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    }
+
+    .bottomText {
+      color: #627289;
+      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+      font-size: 15px;
+      a {
+        text-decoration: none;
+        color: ${(props) => props.theme.textColor};
+        font-weight: 600;
+      }
+    }
+  }
+`;
+
+const StartCoursesBtn = styled.button`
+  background-color: #754ffe;
+  color: white;
+  width: 100%;
+  border: none;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: 0.3s;
+  &:hover {
+    background-color: #5f4ffe;
+  }
+`;
+const socialMedias = ["Google", "Twitter", "Facebook"];
+
 export default function MyPart2({ isDarkTheme, lightTheme, darkTheme, theme }) {
   console.log(darkTheme);
   return (
@@ -133,7 +258,46 @@ export default function MyPart2({ isDarkTheme, lightTheme, darkTheme, theme }) {
             </Button>
           </Part2Box>
         </Col>
-        <Col></Col>
+        <Col className="account">
+          <Account theme={isDarkTheme ? darkTheme : lightTheme}>
+            <Form className="form">
+              <h3>Create Free Account</h3>
+              <ul>
+                {socialMedias.map((item, index) => {
+                  return (
+                    <li>
+                      <a href="!#">
+                        {index === 0 ? <Google /> : ""}
+                        {index === 1 ? <Twitter /> : ""}
+                        {index === 2 ? <Facebook /> : ""}
+                        {item}
+                      </a>
+                    </li>
+                  );
+                })}
+              </ul>
+              <span>
+                <p className="hr"></p>
+                <h3>OR</h3>
+                <p className="hr"></p>
+              </span>
+              <input type="email" placeholder="Email" className="email" />
+              <input
+                type="password"
+                placeholder="Password"
+                className="password"
+              />
+              <StartCoursesBtn>Start Courses for Free</StartCoursesBtn>
+              <hr id="hr-line" />
+              <p className="bottomText">
+                By continuing you accept the <a href="!#">Terms of Use</a>,{" "}
+                <a href="!#">Privacy Policy</a>, and{" "}
+                <a href="!#">Data Policy</a>
+              </p>
+            </Form>
+          </Account>
+        </Col>
+
         <ColChecked
           lg={12}
           className="colChecked"
