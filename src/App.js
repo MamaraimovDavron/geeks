@@ -29,10 +29,11 @@ const darkTheme = {
   socialNetworkBgColor: "#0F172A",
   textColor: "#948CA7",
   part3Body: "#0F172A",
+  borderBottom: "2px solid #0B1324",
 };
 
 const lightTheme = {
-  nav: "#1e293b",
+  nav: "#fff",
   body: "white",
   title: "black",
   subtitle: "gray",
@@ -47,6 +48,7 @@ const lightTheme = {
   socialNetworkBgColor: "#f1f5f9",
   textColor: "black",
   part3Body: "#E2E8F0",
+  borderBottom: "2px solid #f8f8f8",
 };
 
 const App = () => {

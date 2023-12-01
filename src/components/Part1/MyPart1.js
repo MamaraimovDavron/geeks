@@ -28,10 +28,9 @@ const MainBox = styled.div`
   display: flex;
   padding: 15px;
   flex-direction: row;
-  border-bottom: 2px solid #f8f8f8;
+  border-bottom: ${(props) => props.theme.borderBottom};
   /* height: 8vh; */
   background-color: ${(props) => props.theme.nav};
-  /* background-color: #1e293b; */
   #navbarScroll {
     .nav {
       width: 100%;
@@ -133,7 +132,7 @@ const MyPart1 = ({
   theme,
 }) => {
   return (
-    <MainBox>
+    <MainBox theme={isDarkTheme ? darkTheme : lightTheme}>
       <Navbar.Brand href="#">
         <img
           src="https://geeks-react.netlify.app/static/media/logo.e22c846d87ff5a1252df471397badc6d.svg"
