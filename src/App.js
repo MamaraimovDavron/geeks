@@ -5,6 +5,7 @@ import styled from "styled-components";
 import MyPart2 from "./components/Part2/MyPart2";
 import MyPart3 from "./components/Part3/MyPart3";
 import MyPart4 from "./components/Part4/MyPart4";
+import MyPart5 from "./components/Part5/MyPart5";
 
 const AppBox = styled.div`
   /* background-color: red !important; */
@@ -32,6 +33,10 @@ const darkTheme = {
   part3Body: "#0F172A",
   borderBottom: "2px solid #0B1324",
   cardBgColor: "#1E293B",
+  part5BgColor: "#0F172A",
+  colorQuote: "#312B4D",
+  colorQuote1: "#184457",
+  titleReverse: "black",
 };
 
 const lightTheme = {
@@ -52,6 +57,10 @@ const lightTheme = {
   part3Body: "#E2E8F0",
   borderBottom: "2px solid #f8f8f8",
   cardBgColor: "#fff",
+  part5BgColor: "#F1F5F9",
+  colorQuote: "#EDE9FE",
+  colorQuote1: "#E1F6FF",
+  titleReverse: "#fff",
 };
 
 const App = () => {
@@ -85,6 +94,13 @@ const App = () => {
         theme={theme}
       />
       <MyPart4
+        isDarkTheme={isDarkTheme}
+        lightTheme={lightTheme}
+        darkTheme={darkTheme}
+        theme={theme}
+      />
+
+      <MyPart5
         isDarkTheme={isDarkTheme}
         lightTheme={lightTheme}
         darkTheme={darkTheme}
