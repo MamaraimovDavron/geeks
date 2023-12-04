@@ -15,7 +15,7 @@ const AppBox = styled.div`
 
 const darkTheme = {
   nav: "#1E293B",
-  body: "#0F172A",
+  body: "#0B1324",
   title: "#fff",
   subtitle: "#b6b6b6",
   miniBody: "#0B1324",
@@ -30,6 +30,7 @@ const darkTheme = {
   textColor: "#948CA7",
   part3Body: "#0F172A",
   borderBottom: "2px solid #0B1324",
+  cardBgColor: "#1E293B",
 };
 
 const lightTheme = {
@@ -49,6 +50,7 @@ const lightTheme = {
   textColor: "black",
   part3Body: "#E2E8F0",
   borderBottom: "2px solid #f8f8f8",
+  cardBgColor: "#fff",
 };
 
 const App = () => {
