@@ -4,6 +4,7 @@ import { useState } from "react";
 import styled from "styled-components";
 import MyPart2 from "./components/Part2/MyPart2";
 import MyPart3 from "./components/Part3/MyPart3";
+import MyPart4 from "./components/Part4/MyPart4";
 
 const AppBox = styled.div`
   /* background-color: red !important; */
@@ -83,7 +84,12 @@ const App = () => {
         darkTheme={darkTheme}
         theme={theme}
       />
-
+      <MyPart4
+        isDarkTheme={isDarkTheme}
+        lightTheme={lightTheme}
+        darkTheme={darkTheme}
+        theme={theme}
+      />
       {/* <div className="container-fluid"></div> */}
     </AppBox>
   );
