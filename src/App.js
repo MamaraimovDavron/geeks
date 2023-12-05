@@ -6,6 +6,7 @@ import MyPart2 from "./components/Part2/MyPart2";
 import MyPart3 from "./components/Part3/MyPart3";
 import MyPart4 from "./components/Part4/MyPart4";
 import MyPart5 from "./components/Part5/MyPart5";
+import MyPart6 from "./components/Part6/MyPart6";
 
 const AppBox = styled.div`
   /* background-color: red !important; */
@@ -101,6 +102,13 @@ const App = () => {
       />
 
       <MyPart5
+        isDarkTheme={isDarkTheme}
+        lightTheme={lightTheme}
+        darkTheme={darkTheme}
+        theme={theme}
+      />
+
+      <MyPart6
         isDarkTheme={isDarkTheme}
         lightTheme={lightTheme}
         darkTheme={darkTheme}

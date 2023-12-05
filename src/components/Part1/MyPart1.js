@@ -31,6 +31,11 @@ const MainBox = styled.div`
   border-bottom: ${(props) => props.theme.borderBottom};
   /* height: 8vh; */
   background-color: ${(props) => props.theme.nav};
+  align-items: center;
+  .geekAvatar {
+    /* background-color: red; */
+    /* border: 1px solid red; */
+  }
   #navbarScroll {
     .nav {
       width: 100%;
@@ -55,7 +60,7 @@ const MainBox = styled.div`
     }
   }
 `;
-
+// src="/static/media/logo.e22c846d87ff5a1252df471397badc6d.svg"
 const FormBox = styled.div`
   display: flex;
   width: 15%;
@@ -134,10 +139,19 @@ const MyPart1 = ({
   return (
     <MainBox theme={isDarkTheme ? darkTheme : lightTheme}>
       <Navbar.Brand href="#">
-        <img
-          src="https://geeks-react.netlify.app/static/media/logo.e22c846d87ff5a1252df471397badc6d.svg"
-          alt=""
-        />
+        {isDarkTheme ? (
+          <img
+            src="https://geeks-react.netlify.app/static/media/logo.e22c846d87ff5a1252df471397badc6d.svg"
+            alt=""
+            className="geekAvatar"
+          />
+        ) : (
+          <img
+            src="https://geeks-react.netlify.app/static/media/logo.e22c846d87ff5a1252df471397badc6d.svg"
+            alt=""
+            className="geekAvatar"
+          />
+        )}
       </Navbar.Brand>
 
       <Navbar.Collapse id="navbarScroll" className="d-flex">

@@ -30,6 +30,7 @@ const Part5Box = styled.div`
       font-size: 42px;
       font-weight: bold;
       color: ${(props) => props.theme.title};
+      /* font-weight: 600; */
     }
     p {
       font-size: 22px;
