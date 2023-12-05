@@ -8,6 +8,7 @@ import MyPart4 from "./components/Part4/MyPart4";
 import MyPart5 from "./components/Part5/MyPart5";
 import MyPart6 from "./components/Part6/MyPart6";
 import MyPart7 from "./components/Part7/MyPart7";
+import Footer from "./components/Footer/Footer";
 
 const AppBox = styled.div`
   /* background-color: red !important; */
@@ -122,7 +123,12 @@ const App = () => {
         darkTheme={darkTheme}
         theme={theme}
       />
-      {/* <div className="container-fluid"></div> */}
+      <Footer
+        isDarkTheme={isDarkTheme}
+        lightTheme={lightTheme}
+        darkTheme={darkTheme}
+        theme={theme}
+      />
     </AppBox>
   );
 };
